@@ -18,7 +18,7 @@ services:
     extends:
       file: docker-compose.base.yml
       service: wyoming-whisper
-    command: [ "--model", "tiny-int8", "--language", "en" ]
+    command: [ "--model", "tiny-int8", "--language", "en", "--device", "cuda" ]
     build:
       dockerfile: GPU.Dockerfile
     deploy:
